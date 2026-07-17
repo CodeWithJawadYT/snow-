@@ -69,7 +69,8 @@
         "image": "/__l5e/assets-v1/2d4d1634-dcfd-4040-bf33-04ff5c708de9/SnowBros_logo.jpg",
         "@id": "https://snowbrosptbo.ca",
         "url": "https://snowbrosptbo.ca",
-        "telephone": "+1-705-000-0000",
+        "telephone": ["+1-705-772-0494", "+1-705-808-9797"],
+        "email": "SnowBrosptbo@gmail.com",
         "priceRange": "$$",
         "description": "Premium snow removal, automated plowing and commercial snow clearing in Peterborough. 24/7 rapid response.",
         "address": {
@@ -329,6 +330,32 @@
         cursor: pointer;
       }
 
+      /* Header contact strip */
+      .nav-top {
+        display: flex;
+        justify-content: flex-end;
+        gap: 22px;
+        flex-wrap: wrap;
+        padding: 8px 24px;
+        font-size: 0.95rem;
+        color: var(--silver);
+        background: rgba(3, 6, 14, 0.75);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-top a {
+        color: var(--silver);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+      }
+      .nav-top a:hover {
+        color: var(--teal);
+      }
+      .nav-top i {
+        color: var(--teal);
+      }
+
       @media (max-width: 960px) {
         .nav-links {
           position: fixed;
@@ -339,6 +366,7 @@
           border-radius: 18px;
           padding: 12px;
           display: none;
+          box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
         }
         .nav-links.open {
           display: flex;
@@ -347,6 +375,7 @@
           width: 100%;
           font-size: 1.15rem;
           padding: 16px;
+          text-align: left;
         }
         .nav-cta {
           width: 100%;
@@ -358,6 +387,142 @@
           display: inline-flex;
           align-items: center;
           justify-content: center;
+        }
+        .nav-top {
+          justify-content: center;
+          gap: 14px;
+          font-size: 0.9rem;
+          padding: 8px 12px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        html,
+        body {
+          font-size: 17px;
+        }
+        .container {
+          padding: 0 18px;
+        }
+        h1 {
+          font-size: clamp(2rem, 8vw, 2.8rem);
+        }
+        h2 {
+          font-size: clamp(1.7rem, 6vw, 2.2rem);
+        }
+        h3 {
+          font-size: 1.35rem;
+        }
+        section {
+          padding: 56px 0;
+        }
+        .hero {
+          padding: 48px 0 64px;
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        .hero-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .hero-actions .btn {
+          width: 100%;
+          justify-content: center;
+          font-size: 1.05rem;
+          padding: 18px 20px;
+          min-height: 56px;
+        }
+        .stats {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+          margin-top: 44px;
+        }
+        .stat {
+          padding: 18px;
+        }
+        .stat b {
+          font-size: 1.6rem;
+        }
+        .card-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .card {
+          padding: 24px;
+        }
+        .vip-wrap {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .vip-card {
+          padding: 28px;
+        }
+        .vip-price b {
+          font-size: 3rem;
+        }
+        .gallery {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+        .tile {
+          grid-column: span 1 !important;
+          aspect-ratio: 16/10 !important;
+          min-height: 200px;
+        }
+        .cinema-wrap {
+          padding: 12px;
+          border-radius: 20px;
+        }
+        .cinema-caption {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          text-align: left;
+        }
+        .contact-wrap {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+        .contact-info,
+        form.quote {
+          padding: 22px;
+        }
+        .two {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+        .field input,
+        .field select,
+        .field textarea {
+          font-size: 1.05rem;
+          padding: 16px;
+          min-height: 54px;
+        }
+        .form-submit {
+          width: 100%;
+          font-size: 1.1rem;
+          min-height: 58px;
+        }
+        .foot-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          text-align: left;
+        }
+        .foot-grid a {
+          padding: 10px 0;
+          font-size: 1.05rem;
+        }
+        .nav-inner {
+          padding: 12px 16px;
+        }
+        .brand-logo {
+          width: 44px;
+          height: 44px;
+        }
+        .brand-text b {
+          font-size: 1rem;
         }
       }
 
@@ -1190,12 +1355,10 @@
     </style>
   </head>
   <body>
-    <!-- ================= NAV ================= -->
-    <header class="nav" role="banner">
+   
       <div class="nav-inner">
         <div class="brand" data-nav="home" aria-label="SnowBROS Ptbo home">
           <div class="brand-logo">
-            <!-- Image: SnowBros logo.jpg - SnowBros Peterborough mountains logo -->
             <img
               src="SnowBros logo.jpg"
               alt="SnowBROS Peterborough logo — snow-capped mountains"
@@ -1216,6 +1379,7 @@
             <i class="fa-solid fa-snowflake"></i> Get Quote
           </button>
         </nav>
+
         <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -1249,8 +1413,8 @@
                 <button class="btn btn-amber" data-nav="vip">
                   <i class="fa-solid fa-crown"></i> Join VIP — $24.99/mo
                 </button>
-                <a href="tel:+17050000000" class="btn btn-ghost"
-                  ><i class="fa-solid fa-phone"></i> Call 24/7</a
+                <a href="tel:+17057720494" class="btn btn-ghost"
+                  ><i class="fa-solid fa-phone"></i> Call 705-772-0494</a
                 >
               </div>
 
@@ -1648,13 +1812,32 @@
               <div class="info-item">
                 <i class="fa-solid fa-phone"></i>
                 <div>
-                  <b>(705) 000-0000</b><span>24/7 emergency dispatch</span>
+                  <b
+                    ><a href="tel:+17057720494" style="color: var(--white)"
+                      >705-772-0494</a
+                    ></b
+                  ><span>24/7 emergency dispatch</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <b
+                    ><a href="tel:+17058089797" style="color: var(--white)"
+                      >705-808-9797</a
+                    ></b
+                  ><span>Secondary line · Bookings</span>
                 </div>
               </div>
               <div class="info-item">
                 <i class="fa-solid fa-envelope"></i>
                 <div>
-                  <b>hello@snowbrosptbo.ca</b
+                  <b
+                    ><a
+                      href="mailto:SnowBrosptbo@gmail.com"
+                      style="color: var(--white)"
+                      >SnowBrosptbo@gmail.com</a
+                    ></b
                   ><span>Replies within 1 business hour</span>
                 </div>
               </div>
@@ -1680,12 +1863,19 @@
               </div>
             </aside>
 
-            <!-- Replace your_form_id below with your Formspree endpoint (or EmailJS handler) -->
+            <!--
+        DIRECT EMAIL BOOKING FORM
+        Submissions route to: SnowBrosptbo@gmail.com
+        Setup: create a free Formspree form at https://formspree.io using SnowBrosptbo@gmail.com,
+        then replace `your_form_id` below with the generated ID (e.g. /f/xwkgzabc).
+        Until then, submissions fall back to opening the visitor's mail client addressed to SnowBrosptbo@gmail.com.
+      -->
             <form
               class="quote reveal"
               id="quoteForm"
               action="https://formspree.io/f/your_form_id"
               method="POST"
+              data-fallback-email="SnowBrosptbo@gmail.com"
               novalidate
             >
               <div
@@ -1826,11 +2016,14 @@
         </div>
         <div>
           <h4>Contact</h4>
-          <a href="tel:+17050000000"
-            ><i class="fa-solid fa-phone"></i> (705) 000-0000</a
+          <a href="tel:+17057720494"
+            ><i class="fa-solid fa-phone"></i> 705-772-0494</a
           >
-          <a href="mailto:hello@snowbrosptbo.ca"
-            ><i class="fa-solid fa-envelope"></i> hello@snowbrosptbo.ca</a
+          <a href="tel:+17058089797"
+            ><i class="fa-solid fa-phone"></i> 705-808-9797</a
+          >
+          <a href="mailto:SnowBrosptbo@gmail.com"
+            ><i class="fa-solid fa-envelope"></i> SnowBrosptbo@gmail.com</a
           >
           <a><i class="fa-solid fa-location-dot"></i> Peterborough, ON</a>
         </div>
@@ -1978,15 +2171,27 @@
               ?.focus();
             return;
           }
-          // Only intercept if Formspree endpoint has been configured; otherwise let it submit natively.
+          // If Formspree isn't wired yet, fall back to opening the user's mail client addressed to the owner.
           if (form.action.includes("your_form_id")) {
             e.preventDefault();
+            const to = form.dataset.fallbackEmail || "SnowBrosptbo@gmail.com";
+            const get = (n) =>
+              (form.querySelector('[name="' + n + '"]')?.value || "").trim();
+            const subject = `SnowBROS Quote Request — ${get("service") || "New Booking"}`;
+            const body = `New booking / quote request from the SnowBROS Ptbo website:
+
+Name:     ${get("name")}
+Phone:    ${get("phone")}
+Email:    ${get("email")}
+Address:  ${get("address")}
+Service:  ${get("service")}
+
+Details:
+${get("message")}
+`;
+            window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             success.classList.add("show");
             success.scrollIntoView({ behavior: "smooth", block: "center" });
-            form.reset();
-            document
-              .querySelectorAll("[data-field]")
-              .forEach((f) => f.classList.remove("valid", "invalid"));
             return;
           }
           // Ajax submit to Formspree so we can show inline success without page reload.
@@ -2005,10 +2210,10 @@
                 .querySelectorAll("[data-field]")
                 .forEach((f) => f.classList.remove("valid", "invalid"));
             } else {
-              alert("Sorry, something went wrong. Please call (705) 000-0000.");
+              alert("Sorry, something went wrong. Please call 705-772-0494.");
             }
           } catch (err) {
-            alert("Network error — please try again or call (705) 000-0000.");
+            alert("Network error — please try again or call 705-772-0494.");
           }
         });
       })();
